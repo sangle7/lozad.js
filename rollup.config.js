@@ -1,4 +1,3 @@
-import path from 'path'
 import serve from 'rollup-plugin-serve'
 import babel from 'rollup-plugin-babel'
 import livereload from 'rollup-plugin-livereload'
@@ -20,6 +19,7 @@ export default {
     resolve(),
     commonjs({
       include: 'node_modules/**',
+      sourceMap: true,
     }),
     babel({
       babelrc: false,
